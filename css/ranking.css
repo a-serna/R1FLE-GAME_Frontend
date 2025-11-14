@@ -1,0 +1,120 @@
+.hero-posiciones {
+  padding-top: 12rem;
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+/* ======== Tabla scrollable ======== */
+.tabla-wrapper {
+  width: 90%;
+  max-width: 600px;
+  height: 450px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Scroll minimalista */
+.tabla-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+.tabla-wrapper::-webkit-scrollbar-thumb {
+  background: #FFFF00;
+  border-radius: 20px;
+}
+
+/* ======== Ítems ======== */
+.lista-posiciones {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pos-item {
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  padding: 12px 20px;
+  font-weight: 500;
+  gap: 1rem;
+}
+
+.pos-num {
+  background: #fff;
+  color: #081D51;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.pos-nombre {
+  flex: 1;
+  color: #081D51;
+  background: #fff;
+  height: 40px;
+  border-radius: 2.5rem;
+  align-content: center;
+  padding: 0.5rem;
+}
+
+.pos-puntaje {
+  background: #fff;
+  color: #081D51;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* ======== Botón regresar ======== */
+.btn-regresar {
+  background-color: #FFFF00;
+  color: #081D51;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 10px 30px;
+}
+
+.btn-regresar:hover {
+  background-color: #ffe600;
+}
+
+.page-link{
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.page-link:hover{
+    background-color: #fff;
+    color: #081D51;
+}
+
+
+
+/* Responsive */
+@media (min-width: 320px) and (max-width: 395.98px) {
+  .hero-posiciones {
+  padding-top: 4rem;
+}
+.pos-nombre {
+  height: auto;
+  border-radius: 2rem;
+}
+}
+
+@media (min-width: 396px) and (max-width: 575.98px) {
+  .pos-nombre {
+  height: auto;
+}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){
+  .hero-posiciones {
+  padding-top: 8rem;
+}
+
+}

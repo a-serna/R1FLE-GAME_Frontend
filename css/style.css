@@ -1,0 +1,239 @@
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+
+/* ======== Estilos generales ======== */
+body {
+  font-size: 16px;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+.bg-rifle {
+  background: linear-gradient(180deg, rgba(3, 19, 51, 0) 0%, rgba(3, 19, 51, 1) 55%),
+    url('../src/bg_landing.jpg') center/cover no-repeat;
+}
+
+h1,
+h2,
+h4,
+h5 {
+  text-transform: uppercase;
+  color: #FFFF00;
+  font-weight: 500;
+}
+
+.h1-rifle {
+  font-size: 2rem;
+}
+
+.h2-rifle {
+  font-size: 1.8rem;
+}
+
+.h4-rifle {
+  font-size: 1.7rem;
+}
+
+.h5-rifle {
+  font-size: 1.5rem;
+}
+
+p,
+.lead {
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.btn-warning {
+  background-color: #FFFF00;
+  color: #081D51;
+  border: none;
+  border-radius: 2.5rem;
+}
+
+.btn-warning:hover {
+  background-color: #ffe600;
+}
+
+.btn-outline-light {
+  border-radius: 2.5rem;
+}
+
+.btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #081D51;
+}
+
+.rifle-brand {
+  width: 100%;
+  max-width: 260px;
+  min-width: 180px;
+}
+
+/* ======== Hero Section ======== */
+.hero {
+  padding-top: 6rem;
+  min-height: 100vh;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.container-intentos {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card-intento {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #FFFF00;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.card-intento:hover {
+  transform: translateY(-5px);
+  border-color: #FFFF00;
+}
+
+.icon {
+  height: 80px;
+  margin-inline: auto;
+}
+
+/* ======== Premios ======== */
+.premios {
+  background-color: #031333;
+}
+
+section.premios .container-premio:nth-child(1) {
+  border-right: 1px solid #FFFF00;
+}
+
+section.premios .container-premio:last-child {
+  border-left: 1px solid #FFFF00;
+}
+
+.premio {
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.premio:hover {
+  transform: translateY(-5px);
+  border-color: #FFFF00;
+}
+
+/* Responsive */
+@media (min-width: 320px) and (max-width: 395.98px) {
+  .rifle-brand {
+    margin-inline: auto;
+    display: block;
+  }
+  .container-intentos {
+    overflow-x: scroll;
+    justify-content: start;
+    padding: 1rem;
+  }
+  .h1-rifle {
+  font-size: 1.3rem;
+}
+
+.h2-rifle {
+  font-size: 1.25rem;
+}
+
+.h4-rifle {
+  font-size: 1.2rem;
+}
+
+.h5-rifle {
+  font-size: 1.125rem;
+}
+
+p,
+.lead {
+  font-size: 1rem;
+}  
+  .bg-rifle {
+    background: linear-gradient(180deg, rgba(3, 19, 51, 0) 0%, rgb(3, 19, 51) 30%), url('../src/bg_landing_mobile.jpg') top center/contain no-repeat;
+    background-color: #031333 !important;
+  }
+.buttons-game{
+  flex-direction: column;
+}
+section.premios .container-premio:nth-child(1) {
+    border-bottom: 1px solid #FFFF00;
+    border-right: 0px;
+  }
+
+  section.premios .container-premio:last-child {
+    border-top: 1px solid #FFFF00;
+    border-left: 0px;
+  }
+}
+
+@media (min-width: 396px) and (max-width: 575.98px) {
+  .buttons-game{
+  flex-direction: row;
+}
+  section.premios .container-premio:nth-child(1) {
+    border-bottom: 1px solid #FFFF00;
+    border-right: 0px;
+  }
+
+  section.premios .container-premio:last-child {
+    border-top: 1px solid #FFFF00;
+    border-left: 0px;
+  }
+    .container-intentos {
+    overflow-x: scroll;
+    justify-content: start;
+    padding: 1rem;
+  }
+  .rifle-brand {
+    margin-inline: auto;
+    display: block;
+  }
+
+  .hero {
+    text-align: center;
+  }
+  .bg-rifle {
+    background: linear-gradient(180deg, rgba(3, 19, 51, 0) 0%, rgb(3, 19, 51) 35%), url('../src/bg_landing_mobile.jpg') top center/contain no-repeat;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){
+  .container-intentos {
+    overflow-x: scroll;
+    justify-content: start;
+    padding: 1rem;
+  }
+  section.premios .container-premio:nth-child(1) {
+    border-bottom: 1px solid #FFFF00;
+    border-right: 0px;
+  }
+
+  section.premios .container-premio:last-child {
+    border-top: 1px solid #FFFF00;
+    border-left: 0px;
+  }
+  .bg-rifle {
+    background: linear-gradient(180deg, rgba(3, 19, 51, 0) 0%, rgb(3, 19, 51) 45%), url('../src/bg_landing_mobile.jpg') top center/cover no-repeat;
+  }
+}
+
+
+@media (max-width: 991.98px) {
+  .icon {
+    height: 60px;
+  }
+}
