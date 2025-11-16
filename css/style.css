@@ -1,23 +1,41 @@
-@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeueLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeue-Bold';
+  src: url('../fonts/HelveticaNeueBold.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 /* ======== Estilos generales ======== */
 body {
   font-size: 16px;
-  font-family: 'Helvetica Neue', sans-serif;
+  font-family: 'HelveticaNeue';
 }
 
+
 .bg-rifle {
-  background: linear-gradient(180deg, rgba(3, 19, 51, 0) 0%, rgba(3, 19, 51, 1) 55%),
-    url('../src/bg_landing.jpg') center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(3, 19, 51, 0) 0%, rgba(3, 19, 51, 1) 35%),
+    url('../src/bg_landing.jpg');
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: #031333 !important;
 }
 
 h1,
 h2,
-h4,
-h5 {
+h4 {
+  font-family: 'HelveticaNeue-Bold';
   text-transform: uppercase;
-  color: #FFFF00;
-  font-weight: 500;
+  color: #FFFF00
 }
 
 .h1-rifle {
@@ -33,13 +51,14 @@ h5 {
 }
 
 .h5-rifle {
+  font-family: 'HelveticaNeue-Bold';
   font-size: 1.5rem;
+  color: #FFFF00;
 }
 
 p,
 .lead {
   color: #ffffff;
-  font-weight: 300;
   font-size: 1.5rem;
 }
 
@@ -59,7 +78,7 @@ p,
 }
 
 .btn-outline-light:hover {
-  background-color: #ffffff;
+  background-color: #FFFF00;
   color: #081D51;
 }
 
@@ -73,6 +92,7 @@ p,
 .hero {
   padding-top: 6rem;
   min-height: 100vh;
+  margin-top: 6rem;
 }
 
 .logo {
@@ -96,6 +116,7 @@ p,
   flex-direction: column;
   justify-content: center;
   color: #ffffff;
+  text-align: center;
 }
 
 .card-intento:hover {
@@ -106,6 +127,30 @@ p,
 .icon {
   height: 80px;
   margin-inline: auto;
+}
+
+.icon-arrow {
+  height: 60px;
+  margin-inline: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease
+}
+
+.icon-arrow:hover {
+  transform: translateY(-5px);
+}
+
+.terms-container {
+  position: relative;
+  margin-block: 2rem;
+}
+
+.conditions-link p {
+  font-size: 1rem;
+  text-decoration: underline;
+  color: #ffffff;
 }
 
 /* ======== Premios ======== */
@@ -134,42 +179,67 @@ section.premios .container-premio:last-child {
 /* Responsive */
 @media (min-width: 320px) and (max-width: 395.98px) {
   .rifle-brand {
+    width: 100%;
+    max-width: 160px;
+    min-width: 100px;
     margin-inline: auto;
     display: block;
   }
+
+  .hero {
+    padding-inline: 1rem;
+  }
+
   .container-intentos {
     overflow-x: scroll;
     justify-content: start;
     padding: 1rem;
   }
+
   .h1-rifle {
-  font-size: 1.3rem;
-}
+    font-size: 1.3rem;
+  }
 
-.h2-rifle {
-  font-size: 1.25rem;
-}
+  .h2-rifle {
+    font-size: 1.25rem;
+    text-align: center;
+  }
 
-.h4-rifle {
-  font-size: 1.2rem;
-}
+  .h4-rifle {
+    font-size: 1.2rem;
+  }
 
-.h5-rifle {
-  font-size: 1.125rem;
-}
+  .h5-rifle {
+    font-size: 1.125rem;
+  }
 
-p,
-.lead {
-  font-size: 1rem;
-}  
+  p,
+  .lead {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .terms-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .icon-arrow {
+    position: relative;
+    order: 2;
+    margin-left: 0;
+  }
+
   .bg-rifle {
     background: linear-gradient(180deg, rgba(3, 19, 51, 0) 0%, rgb(3, 19, 51) 30%), url('../src/bg_landing_mobile.jpg') top center/contain no-repeat;
     background-color: #031333 !important;
   }
-.buttons-game{
-  flex-direction: column;
-}
-section.premios .container-premio:nth-child(1) {
+
+  .buttons-game {
+    flex-direction: column;
+  }
+
+  section.premios .container-premio:nth-child(1) {
     border-bottom: 1px solid #FFFF00;
     border-right: 0px;
   }
@@ -181,9 +251,18 @@ section.premios .container-premio:nth-child(1) {
 }
 
 @media (min-width: 396px) and (max-width: 575.98px) {
-  .buttons-game{
-  flex-direction: row;
-}
+  .rifle-brand {
+    width: 100%;
+    max-width: 160px;
+    min-width: 100px;
+    margin-inline: auto;
+    display: block;
+  }
+
+  .buttons-game {
+    flex-direction: row;
+  }
+
   section.premios .container-premio:nth-child(1) {
     border-bottom: 1px solid #FFFF00;
     border-right: 0px;
@@ -193,30 +272,38 @@ section.premios .container-premio:nth-child(1) {
     border-top: 1px solid #FFFF00;
     border-left: 0px;
   }
-    .container-intentos {
-    overflow-x: scroll;
-    justify-content: start;
-    padding: 1rem;
-  }
-  .rifle-brand {
-    margin-inline: auto;
-    display: block;
-  }
 
-  .hero {
-    text-align: center;
-  }
-  .bg-rifle {
-    background: linear-gradient(180deg, rgba(3, 19, 51, 0) 0%, rgb(3, 19, 51) 35%), url('../src/bg_landing_mobile.jpg') top center/contain no-repeat;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px){
   .container-intentos {
     overflow-x: scroll;
     justify-content: start;
     padding: 1rem;
   }
+
+  .terms-container {
+    align-content: center;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .bg-rifle {
+    background: linear-gradient(180deg, rgba(3, 19, 51, 0) 0%, rgb(3, 19, 51) 25%), url('../src/bg_landing_mobile.jpg') top center/contain no-repeat;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container-intentos {
+    overflow-x: scroll;
+    justify-content: start;
+    padding: 1rem;
+  }
+
+  .terms-container {
+    margin-block: 3rem;
+    align-content: center;
+  }
+
   section.premios .container-premio:nth-child(1) {
     border-bottom: 1px solid #FFFF00;
     border-right: 0px;
@@ -226,14 +313,31 @@ section.premios .container-premio:nth-child(1) {
     border-top: 1px solid #FFFF00;
     border-left: 0px;
   }
+
   .bg-rifle {
-    background: linear-gradient(180deg, rgba(3, 19, 51, 0) 0%, rgb(3, 19, 51) 45%), url('../src/bg_landing_mobile.jpg') top center/cover no-repeat;
+    background: linear-gradient(180deg, rgba(3, 19, 51, 0) 0%, rgba(3, 19, 51, 1) 25%),
+      url('../src/bg_landing.jpg');
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #031333 !important;
   }
 }
 
 
 @media (max-width: 991.98px) {
+  .terms-container {
+    margin-block: 3rem;
+    align-content: center;
+  }
   .icon {
     height: 60px;
+  }
+  .bg-rifle {
+    background: linear-gradient(180deg, rgba(3, 19, 51, 0) 0%, rgba(3, 19, 51, 1) 25%),
+      url('../src/bg_landing.jpg');
+    background-size: 100%;
+    background-color: #031333 !important;
   }
 }

@@ -6,11 +6,12 @@
   <title>RIFLE | Promoción Navidad</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="./src/rifle-favicon.png" type="image/x-icon">
 </head>
 <body class="bg-rifle">
 
 <header>
-        <nav class="container mt-5">
+        <nav class="container mt-md-5 mt-2">
             <a class="navbar-brand" href="#"><img class="rifle-brand" src="./src/Rifle_brand.svg" alt=""></a>
         </nav>
 </header>
@@ -19,18 +20,18 @@
   <section class="hero d-flex align-items-center justify-content-md-start justify-content-center">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-8">
-                <h1 class="h1-rifle mb-3">EN ESTA NAVIDAD, CADA COMPRA PUEDE LLEVARTE A GANAR</h1>
+            <div class="col-12 col-md-6">
+                <h2 class="h2-rifle mb-3">EN ESTA NAVIDAD, CADA COMPRA PUEDE LLEVARTE A GANAR</h2>
                 <p class="lead mb-4">
                     Regístrate, juega por 1 minuto y demuestra tu destreza atrapando la magia de la temporada.
                 </p>
                 <div class="d-flex buttons-game justify-content-md-start justify-content-center gap-3 mb-5">
-                    <a href="./pages/register.html" class="btn btn-warning px-4">Jugar ahora</a>
+                    <a href="./pages/register.html" class="btn btn-outline-light px-4">Jugar ahora</a>
                     <a href="./pages/ranking.html" class="btn btn-outline-light px-4">Ver tabla de posiciones</a>
                 </div>
             </div>
-            <div class="col-12">
-                <h4 class="h4-rifle my-3 text-center">Participa del 1 de diciembre al 31 de diciembre 2026</h4>
+            <div class="col-12 col-md-7 mx-auto mb-5">
+                <h5 class="h5-rifle my-3 text-center">Por compras desde el 1 al 31 de diciembre del 2025, podrás jugar aquí hasta el 15 de enero del 2026</h5>
             </div>
         </div>
       
@@ -60,13 +61,17 @@
         </div>
       </div>
 
-      <a class="text-decoration-none" href="#" target="_blank" rel="noopener noreferrer"><p class="mt-3 text-center">*Conoce aquí los términos y condiciones</p></a>
-      <img class="icon" src="./src/arrow_down.svg" alt="ir abajo">
+      <div class="col-12 terms-container">
+        <img class="icon-arrow" src="./src/arrow_down.svg" alt="ir abajo">
+        <a class="text-decoration-none conditions-link" href="#" target="_blank" rel="noopener noreferrer"><p class="mt-3 text-center">*Conoce aquí los términos y condiciones</p></a>
+      </div>
+      
+      
     </div>
   </section>
 
   <!-- Premios Section -->
-  <section class="premios text-center text-white py-5">
+  <section class="premios text-center text-white">
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-8 mx-auto">
@@ -103,12 +108,12 @@
         </div>
       </div>
 
-      <a href="./pages/register.html" class="btn btn-warning mt-5 px-4">Jugar ahora</a>
+      <a href="./pages/register.html" class="btn btn-outline-light my-5 px-4">Jugar ahora</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center text-white py-3">
+  <footer class="text-center text-white my-5">
     <p class="small">Todos los derechos reservados Rifle © 2025</p>
   </footer>
 

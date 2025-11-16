@@ -1,14 +1,19 @@
 /* ============ Fondo ============ */
 
 .bg-register{
-    background: linear-gradient(180deg,rgba(3, 19, 51, 0) 0%, rgba(3, 19, 51, 1) 100%),
-              url('../src/bg_register.jpg') top center/cover no-repeat;
+    background: linear-gradient(180deg,rgba(3, 19, 51, 0) 0%, rgba(3, 19, 51, 1) 50%),
+              url('../src/bg_register.jpg');
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #031333 !important;
 }
 
 .registro-hero {
   height: 100vh;
   color: white;
-  padding: 40px 0;
+  padding-top: 3rem;
 }
 
 .logo-rifle {
@@ -39,7 +44,7 @@
 
 .input-rifle:focus {
   outline: none;
-  box-shadow: 0 0 0 0.15rem rgba(255, 235, 0, 0.4);
+  box-shadow: 0 0 0 0.15rem #FFFF00;
 }
 
 /* ============ Checkbox ============ */
@@ -50,8 +55,13 @@
 }
 
 .form-check-input:checked {
-  background-color: #FFFF00;
-  border-color: #FFFF00;
+  background-color: #081D51;
+  border-color: #fff;
+}
+
+input[type="checkbox"]:checked::after{
+  background-color: red;
+  color: aquamarine;
 }
 
 .btn-accion:hover {
@@ -59,10 +69,15 @@
   color: #071028;
 }
 
+
+
 /* Responsive */
 @media (min-width: 320px) and (max-width: 395.98px) {
   .bg-register{
-    background: linear-gradient(180deg,rgba(3, 19, 51, 0) 0%, rgb(3, 19, 51) 100%), url('../src/bg_register_mobile.jpg') top center/cover no-repeat;
+    background: linear-gradient(180deg,rgba(3, 19, 51, 0) 0%, rgb(3, 19, 51) 75%), url('../src/bg_register_mobile.jpg') top center/cover no-repeat;
+    background-color: #031333 !important;
+    background-size:  100%;
+    background-repeat: no-repeat;
   }
   .registro-hero {
   padding-top: 8rem;
@@ -80,10 +95,14 @@
 
 @media (min-width: 396px) and (max-width: 575.98px) {
   .bg-register{
-    background: linear-gradient(180deg,rgba(3, 19, 51, 0) 0%, rgb(3, 19, 51) 100%), url('../src/bg_register_mobile.jpg') top center/cover no-repeat;
+    background: linear-gradient(180deg,rgba(3, 19, 51, 0) 0%, rgb(3, 19, 51) 100%), url('../src/bg_register_mobile.jpg');
+    background-color: #031333 !important;
+    background-size:  100%;
+    background-repeat: no-repeat;
   }
   .registro-hero {
   padding-top: 14rem;
+  margin-top: 3rem;
   height: auto;
   padding-inline: 2rem;
 }
@@ -91,7 +110,12 @@
 
 @media (min-width: 576px) and (max-width: 767.98px){
   .bg-register{
-    background: linear-gradient(180deg,rgba(3, 19, 51, 0) 0%, rgb(3, 19, 51) 100%), url('../src/bg_register_mobile.jpg') top center/cover no-repeat;
+    background: linear-gradient(180deg,rgba(3, 19, 51, 0) 0%, rgb(3, 19, 51) 100%), url('../src/bg_register_mobile.jpg');
+    background-color: #031333 !important;
+    background-size:  100%;
+    background-repeat: no-repeat;
+    background-position-x: 0%;
+    background-position-y: 40%;
   }
   .registro-hero {
   padding-top: 16rem;
