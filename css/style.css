@@ -75,11 +75,15 @@ p,
 
 .btn-outline-light {
   border-radius: 2.5rem;
+  border: 1px solid #FFFF00;
+  color: #FFFF00;
+  background-color: transparent;
 }
 
 .btn-outline-light:hover {
   background-color: #FFFF00;
   color: #081D51;
+  border: 1px solid #FFFF00;
 }
 
 .rifle-brand {
