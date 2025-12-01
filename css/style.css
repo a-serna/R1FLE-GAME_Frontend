@@ -180,6 +180,35 @@ section.premios .container-premio:last-child {
   border-color: #FFFF00;
 }
 
+
+/* terminos */
+ol {
+  counter-reset: section;
+  padding-left: 0;
+}
+
+li {
+  display: block;
+} 
+
+ol>li::before {
+  counter-increment: section;
+  content: counters(section, ".") " ";
+  padding-right: 5px;
+}
+
+ul>li {
+  list-style: disc;
+  color: white;
+  display: list-item;
+}
+ 
+ol ol {
+  padding-left: 20px;
+} 
+
+
+
 /* Responsive */
 @media (min-width: 320px) and (max-width: 395.98px) {
   .rifle-brand {
